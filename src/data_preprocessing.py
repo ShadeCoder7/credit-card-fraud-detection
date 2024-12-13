@@ -133,10 +133,10 @@ cm = confusion_matrix(y_test, y_pred)
 
 # Plot the confusion matrix using a heatmap
 plt.figure(figsize=(8, 6))
-sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=["No Fraude", "Fraude"], yticklabels=["No Fraude", "Fraude"])
-plt.title("Matriz de Confusión")
-plt.xlabel("Predicción")
-plt.ylabel("Real")
+sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=["No Fraud", "Fraud"], yticklabels=["No Fraud", "Fraud"])
+plt.title("Confusion Matrix")
+plt.xlabel("Prediction")
+plt.ylabel("Actual")
 plt.show()
 
 # Compute the ROC curve
@@ -145,11 +145,11 @@ roc_auc = auc(fpr, tpr)
 
 # Plot the ROC curve
 plt.figure(figsize=(8, 6))
-plt.plot(fpr, tpr, color="darkorange", lw=2, label=f"Área bajo la curva (AUC) = {roc_auc:.2f}")
+plt.plot(fpr, tpr, color="darkorange", lw=2, label=f"Area Under the Curve (AUC) = {roc_auc:.2f}")
 plt.plot([0, 1], [0, 1], color="navy", lw=2, linestyle="--")
-plt.title("Curva ROC")
-plt.xlabel("Tasa de Falsos Positivos")
-plt.ylabel("Tasa de Verdaderos Positivos")
+plt.title("ROC Curve")
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
 plt.legend(loc="lower right")
 plt.show()
 
@@ -168,9 +168,9 @@ feature_importance_df = feature_importance_df.sort_values(by='Importance', ascen
 # Plot the feature importances
 plt.figure(figsize=(10, 6))
 sns.barplot(x='Importance', y='Feature', data=feature_importance_df)
-plt.title("Importancia de las Características")
-plt.xlabel("Importancia")
-plt.ylabel("Características")
+plt.title("Feature Importances")
+plt.xlabel("Importance")
+plt.ylabel("Features")
 plt.show()
 
 # Save the trained model

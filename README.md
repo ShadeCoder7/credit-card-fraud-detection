@@ -30,6 +30,8 @@ project_root/
 
 ├── README.md # Project documentation
 
+├── requirements.txt # Project dependencies
+
 ## Dataset
 
 - **Source**: Kaggle - Credit Card Fraud Detection Dataset
