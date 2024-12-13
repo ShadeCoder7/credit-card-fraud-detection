@@ -6,116 +6,90 @@ This project involves detecting fraudulent transactions in a credit card dataset
 
 ## Project Structure
 
-```
 project_root/
 ├── src/
-│   ├── data_preprocessing.py  # Data processing, analysis, and model training
+│ ├── data_preprocessing.py # Data processing, analysis, and model training
 ├── notebooks/
-│   └── exploratory_analysis.ipynb  # Exploratory Data Analysis (EDA) and experiments
-├── images/                # Folder containing generated graphs
-│   ├── fraud_vs_nonfraud.png
-│   ├── roc_curve.png
-│   ├── confusion_matrix.png
-├── venv/                  # Virtual environment (dependencies)
-├── README.md              # Project documentation
+│ └── exploratory_analysis.ipynb # Exploratory Data Analysis (EDA) and experiments
+├── images/ # Folder containing generated graphs
+│ ├── fraud_vs_nonfraud.png
+│ ├── roc_curve.png
+│ ├── confusion_matrix.png
+├── venv/ # Virtual environment (dependencies)
+├── README.md # Project documentation
 
-Dataset
+## Dataset
 
-Source: Kaggle - Credit Card Fraud Detection Dataset
+- **Source**: Kaggle - Credit Card Fraud Detection Dataset
+- **Description**: Contains 284,807 transactions, where 0.17% are fraudulent.
+- **Features**:
+  - Numerical features V1, V2, ... V28 (resulting from PCA transformation)
+  - Time: Seconds elapsed between this and the first transaction
+  - Amount: Transaction amount
+  - Class: Target variable (0 = Non-Fraud, 1 = Fraud)
 
-Description: Contains 284,807 transactions, where 0.17% are fraudulent.
+## Key Steps
 
-Features:
+### Data Preprocessing:
 
-Numerical features V1, V2, ... V28 (resulting from PCA transformation)
+- Handle missing and duplicate values.
+- Normalize/scale transaction amounts.
 
-Time: Seconds elapsed between this and the first transaction
+### Exploratory Data Analysis (EDA):
 
-Amount: Transaction amount
+- Analyze the distribution of fraudulent vs. non-fraudulent transactions.
+- Visualize transaction amounts.
 
-Class: Target variable (0 = Non-Fraud, 1 = Fraud)
+### Model Training:
 
-Key Steps
+- Train a Random Forest Classifier on the processed data.
+- Evaluate performance using metrics like accuracy, confusion matrix, and ROC curve.
 
-Data Preprocessing:
+### Model Saving:
 
-Handle missing and duplicate values.
+- Save the trained model for future predictions using joblib.
 
-Normalize/scale transaction amounts.
+## Results
 
-Exploratory Data Analysis (EDA):
+### Distribution of Transactions
 
-Analyze the distribution of fraudulent vs. non-fraudulent transactions.
-
-Visualize transaction amounts.
-
-Model Training:
-
-Train a Random Forest Classifier on the processed data.
-
-Evaluate performance using metrics like accuracy, confusion matrix, and ROC curve.
-
-Model Saving:
-
-Save the trained model for future predictions using joblib.
-
-Results
-
-Distribution of Transactions
-
-
-
-ROC Curve
+### ROC Curve
 
 The ROC curve shows the trade-off between the true positive rate and false positive rate. AUC = 0.99 indicates excellent performance.
 
+### Confusion Matrix
 
-Confusion Matrix
+The confusion matrix highlights the model’s ability to distinguish fraudulent transactions.
 
-The confusion matrix highlights the model’s ability to distinguish fraudulent transactions:
+## Technologies Used
 
+### Python Libraries:
 
-Technologies Used
+- pandas, numpy for data manipulation and analysis
+- matplotlib, seaborn for data visualization
+- scikit-learn for machine learning and evaluation
 
-Python Libraries:
+### Tools:
 
-pandas, numpy for data manipulation and analysis
+- Jupyter Notebook for interactive data exploration
+- Kaggle API for dataset access
 
-matplotlib, seaborn for data visualization
+## How to Run
 
-scikit-learn for machine learning and evaluation
+1. Clone this repository.
+2. Install dependencies using:
+   "pip install -r requirements.txt"
+3. Download the dataset from Kaggle and place it in the appropriate directory, or use kagglehub to automate the download.
+4. Run the data_preprocessing.py script for model training:
+  "python src/data_preprocessing.py"
+5. View results in the images/ folder.
 
-Tools:
+## Future Work
 
-Jupyter Notebook for interactive data exploration
+- Experiment with other classifiers like XGBoost or Neural Networks.
+- Optimize hyperparameters for better accuracy.
+- Explore anomaly detection methods for unsupervised learning.
 
-Kaggle API for dataset access
-
-How to Run
-
-Clone this repository.
-
-Install dependencies using:
-
-pip install -r requirements.txt
-
-Download the dataset from Kaggle and place it in the appropriate directory, or use kagglehub to automate the download.
-
-Run the data_preprocessing.py script for model training:
-
-python src/data_preprocessing.py
-
-View results in the images/ folder.
-
-Future Work
-
-Experiment with other classifiers like XGBoost or Neural Networks.
-
-Optimize hyperparameters for better accuracy.
-
-Explore anomaly detection methods for unsupervised learning.
-
-Acknowledgments
+## Acknowledgments
 
 Special thanks to Kaggle for providing the dataset.
-
