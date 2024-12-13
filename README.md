@@ -26,6 +26,12 @@ project_root/
 
 │ ├── confusion_matrix.png
 
+│ ├── Distribution of fraudulent transaction amounts.png
+
+│ ├── model information.png
+
+│ ├── feature importances.png
+
 ├── venv/ # Virtual environment (dependencies)
 
 ├── README.md # Project documentation
