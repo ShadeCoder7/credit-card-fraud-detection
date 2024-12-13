@@ -26,7 +26,7 @@ project_root/
 
 │ ├── confusion_matrix.png
 
-│ ├── Distribution of fraudulent transaction amounts.png
+│ ├── distribution of fraudulent transaction amounts.png
 
 │ ├── model information.png
 
