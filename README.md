@@ -7,15 +7,25 @@ This project involves detecting fraudulent transactions in a credit card dataset
 ## Project Structure
 
 project_root/
+
 ├── src/
+
 │ ├── data_preprocessing.py # Data processing, analysis, and model training
+
 ├── notebooks/
+
 │ └── exploratory_analysis.ipynb # Exploratory Data Analysis (EDA) and experiments
+
 ├── images/ # Folder containing generated graphs
+
 │ ├── fraud_vs_nonfraud.png
+
 │ ├── roc_curve.png
+
 │ ├── confusion_matrix.png
+
 ├── venv/ # Virtual environment (dependencies)
+
 ├── README.md # Project documentation
 
 ## Dataset
