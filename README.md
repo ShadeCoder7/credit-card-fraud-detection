@@ -8,9 +8,11 @@ This project involves detecting fraudulent transactions in a credit card dataset
 
 project_root/
 
-├── src/
+├── src/ 
 
-│ ├── data_preprocessing.py # Data processing, analysis, and model training
+  ├── config.py             # Main configuration file containing dataset URLs and essential constants.  
+
+  ├── data_preprocessing.py # Core script for data processing, analysis, and model training.  
 
 ├── notebooks/
 
