@@ -10,9 +10,9 @@ project_root/
 
 ├── src/ 
 
-  ├── config.py             # Main configuration file containing dataset URLs and essential constants.  
+│ ├── config.py             # Main configuration file containing dataset URLs and essential constants.  
 
-  ├── data_preprocessing.py # Core script for data processing, analysis, and model training.  
+│ ├── data_preprocessing.py # Core script for data processing, analysis, and model training.  
 
 ├── notebooks/
 
